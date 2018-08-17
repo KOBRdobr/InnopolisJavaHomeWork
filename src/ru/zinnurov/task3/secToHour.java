@@ -1,9 +1,23 @@
 package ru.zinnurov.task3;
+import java.util.Scanner;
 
 public class secToHour {
     public static void main(String[] args) {
-        if(args.length > 0) {
-            int second = Integer.parseInt(args[0]); //Секунды (Перевод из строки в число).
+        Scanner in = new Scanner(System.in);
+        int second = 0; //Секунды (Перевод из строки в число).
+
+        boolean flag = true; // истина - введено НЕ число. Ложь - введено число
+
+        while(flag) { // Проверка ввода и доволнителный шанс ввода
+            try { // Отработка исключений
+                second = in.nextInt();
+                flag = false;
+            } catch (java.util.InputMismatchException e) {
+                System.out.println("Введите число!");
+                in.next();
+            }
+        }
+        if(second > 0) {
 
             int hour = ((second / 60) / 60); // Подсчет кол-ва часов в секундах.
 

@@ -1,9 +1,25 @@
 package ru.zinnurov.task2;
+import java.util.Scanner;
 
 public class money {
     public static void main(String[] args) {
-        if(args.length > 0) {
-            int money = Integer.parseInt(args[0]); // Зарплата.
+
+        Scanner in = new Scanner(System.in);
+        int money = 0; // Зарплата.
+
+        boolean flag = true; // истина - введено НЕ число. Ложь - введено число
+
+        while(flag) { // Проверка ввода и доволнителный шанс ввода
+            try { // Отработка исключений
+                money = in.nextInt();
+                flag = false;
+            } catch (java.util.InputMismatchException e) {
+                System.out.println("Введите число!");
+                in.next();
+            }
+        }
+
+        if(money > 0) {
 
             int salary = (int) (money * 0.87); // Зарплата чистыми.
 
