@@ -5,7 +5,7 @@ public class money {
         if(args.length > 0) {
             int money = Integer.parseInt(args[0]); // Зарплата.
 
-            int salary = (money * 87) / 100; // Зарплата чистыми.
+            int salary = (int) (money * 0.87); // Зарплата чистыми.
 
             System.out.println("Зарплата по договору: " + money);
             System.out.println("Ваша зарплата, с учетом НДФЛ, будет составлять: " + salary + " рублей.");
