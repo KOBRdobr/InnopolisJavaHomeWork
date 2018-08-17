@@ -9,23 +9,20 @@ public class money {
 
         boolean flag = true; // истина - введено НЕ число. Ложь - введено число
 
-        while(flag) { // Проверка ввода и доволнителный шанс ввода
-            try { // Отработка исключений
+        System.out.println("Укажите зарплату");
+
+        while (flag) {
+            if (in.hasNextInt()) {
                 money = in.nextInt();
+                int salary = (int) (money * 0.87); // Зарплата чистыми.
+
+                System.out.println("Зарплата по договору: " + money);
+                System.out.println("Ваша зарплата, с учетом НДФЛ, будет составлять: " + salary + " рублей.");
                 flag = false;
-            } catch (java.util.InputMismatchException e) {
-                System.out.println("Введите число!");
+            } else {
+                System.out.println("Укажите зарплату");
                 in.next();
             }
         }
-
-        if(money > 0) {
-
-            int salary = (int) (money * 0.87); // Зарплата чистыми.
-
-            System.out.println("Зарплата по договору: " + money);
-            System.out.println("Ваша зарплата, с учетом НДФЛ, будет составлять: " + salary + " рублей.");
-        }
-        else System.out.print("Укажите зарплату");
     }
 }
