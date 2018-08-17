@@ -10,6 +10,6 @@ public class money {
             System.out.println("Зарплата по договору: " + money);
             System.out.println("Ваша зарплата, с учетом НДФЛ, будет составлять: " + salary + " рублей.");
         }
-        else System.out.print("Вы не указали зарплату по договору");
+        else System.out.print("Укажите зарплату");
     }
 }
