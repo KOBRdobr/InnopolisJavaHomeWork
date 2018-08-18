@@ -7,10 +7,8 @@ public class secToHour {
         Scanner in = new Scanner(System.in);
         int second = 0; //Секунды (Перевод из строки в число).
 
-        boolean flag = true; // истина - введено НЕ число. Ложь - введено число
-
         System.out.println("Укажите секунды");
-        while(flag) { // Проверка ввода и доволнителный шанс ввода
+        while(true) { // Проверка ввода и доволнителный шанс ввода
 
             if (in.hasNextInt()) {
 
@@ -19,7 +17,7 @@ public class secToHour {
 
                 System.out.print("В " + second + " секундах, "); // Вывод.
                 System.out.println(hour + " час(ов)."); // Вывод.
-                flag = false;
+                break;
             }
             else {
                 System.out.println("Не указаны секунды.");

@@ -7,18 +7,16 @@ public class money {
         Scanner in = new Scanner(System.in);
         int money = 0; // Зарплата.
 
-        boolean flag = true; // истина - введено НЕ число. Ложь - введено число
-
         System.out.println("Укажите зарплату");
 
-        while (flag) {
+        while (true) {
             if (in.hasNextInt()) {
                 money = in.nextInt();
                 int salary = (int) (money * 0.87); // Зарплата чистыми.
 
                 System.out.println("Зарплата по договору: " + money);
                 System.out.println("Ваша зарплата, с учетом НДФЛ, будет составлять: " + salary + " рублей.");
-                flag = false;
+                break;
             } else {
                 System.out.println("Укажите зарплату");
                 in.next();
