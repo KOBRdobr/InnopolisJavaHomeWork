@@ -1,7 +1,7 @@
 package ru.zinnurov.task1;
 import java.util.Scanner;
 
-public class fuel {
+public class Fuel {
     public static void main(String[] args) {
 
         final int GAS_PRICE = 43;

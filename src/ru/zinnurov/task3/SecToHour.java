@@ -1,7 +1,7 @@
 package ru.zinnurov.task3;
 import java.util.Scanner;
 
-public class secToHour {
+public class SecToHour {
     public static void main(String[] args) {
 
         Scanner in = new Scanner(System.in);
