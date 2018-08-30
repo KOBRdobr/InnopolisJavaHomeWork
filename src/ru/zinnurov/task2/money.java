@@ -12,11 +12,17 @@ public class money {
         while (true) {
             if (in.hasNextInt()) {
                 money = in.nextInt(); //Пользователь вводит с клавиатуры какая у него ЗП.
-                salary = (int) (money * 0.87); // Зарплата чистыми.
+                if(money !=0 && money > 0) {
+                    salary = (int) (money * 0.87); // Зарплата чистыми.
 
-                System.out.println("Зарплата по договору: " + money);
-                System.out.println("Ваша зарплата, с учетом НДФЛ, будет составлять: " + salary + " рублей.");
-                break;
+                    System.out.println("Зарплата по договору: " + money);
+                    System.out.println("Ваша зарплата, с учетом НДФЛ, будет составлять: " + salary + " рублей.");
+                    break;
+                }
+                else {
+                    System.out.println("Введите число больше 0!");
+                    continue;
+                }
             } else {
                 System.out.println("Укажите зарплату в числах!");
                 in.next();

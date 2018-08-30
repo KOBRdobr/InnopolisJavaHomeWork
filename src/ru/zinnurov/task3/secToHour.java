@@ -6,18 +6,24 @@ public class secToHour {
 
         Scanner in = new Scanner(System.in);
         int second, hour;
+        final int SECONDS = 60;
 
         System.out.println("Укажите секунды");
         while(true) { // Проверка ввода и доволнителный шанс ввода
 
             if (in.hasNextInt()) {
-
                 second = in.nextInt();// Пользователь вводит с клавиатуры сколько секунд.
-                hour = ((second / 60) / 60); // Подсчет кол-ва часов в секундах.
+                if(second !=0 && second > 0) {
+                    hour = ((second / SECONDS) / SECONDS); // Подсчет кол-ва часов в секундах.
 
-                System.out.print("В " + second + " секундах, "); // Вывод.
-                System.out.println(hour + " час(ов)."); // Вывод.
-                break;
+                    System.out.print("В " + second + " секундах, "); // Вывод.
+                    System.out.println(hour + " час(ов)."); // Вывод.
+                    break;
+                }
+                else {
+                    System.out.println("Введите число больше 0!");
+                    continue;
+                }
             }
             else {
                 System.out.println("Не указаны секунды.");
